@@ -1,0 +1,16 @@
+{
+	"manifest_version": 3,
+
+	"name": "AWS Region Color Toolbar",
+	"description": "Changes the color of the top nav bar, of the AWS web console, based on region for easy referencing.",
+	"version": "3",
+	"author": "Chris Slamar",
+
+	"content_scripts": [
+		{
+			"matches": ["https://*.aws.amazon.com/*", "https://*.amazonaws-us-gov.com/*"],
+			"js": ["regioncolor.js"],
+			"run_at": "document_end"
+		}
+	]
+}
